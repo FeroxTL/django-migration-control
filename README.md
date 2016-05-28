@@ -34,7 +34,7 @@ class TestModel(models.Model):
         help_text='This is demo help')
 ```
 
-You alreadt have made all migrations with ```./manage.py makemigrations``` and your models are synced with database:
+You already have made all migrations with ```./manage.py makemigrations``` and your models are synced with database:
 ```
 ./manage.py migrate --list
 demo
@@ -81,7 +81,7 @@ class Migration(migrations.Migration):
     ]
 ```
 
-You say "Whaaat? I havent changed database structure! Why this migration appears here?"
+You say "Whaaat? I haven't changed database structure! Why this migration appears here?"
 
 And you are right. There is no any database changes here. Django just watches **all** changes. Let's change this behavior
 
@@ -95,7 +95,7 @@ from migration_control.db import models
 ```
 They are the same and all your managers and function, that are in django, will continue working (Report bug if not).
 
-2. ```./manage.py makemigrations```. Thit will create new migration that maps django fields to components fields.
+2. ```./manage.py makemigrations```. It will create new migration that maps django fields to components fields.
 ```
 $./manage.py makemigrations --dry-run --verbosity=3
 Migrations for 'demo':
@@ -139,4 +139,8 @@ class MPTTModel(NoMigrateMixin, mptt_models.MPTTModel):
 # Limitations
 It works in Django 1.7 - 1.9.13, but I'm not shure it will work in next releases. Django migrations sometimes are changed, so double check migration, that changes your model fields - it shouldn't delete any of your fields or models, it should only change field types.
 
-Python 2.7+ is required bacause of absolute\_import and other \__future__ functions
+Python 2.7+ is required because of absolute\_import and other \__future__ functions
+
+# Versions
+
+0.1.1 First wersion
