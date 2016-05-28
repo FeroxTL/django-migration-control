@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: django-migration-control
+Version: 0.1
+Author: Makarov Yurii
+Author-email: winnerer@ya.ru
+Home-page: https://github.com/FeroxTL/django-migration-control
+Download-url: UNKNOWN
+Summary: Django migration control allows avoid unnecessary migrations such as changing help_text or verbose_name of fields
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+
